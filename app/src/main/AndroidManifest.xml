@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.exampletest">
+    <!-- 访问网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -9,13 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ExampleTest">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.ToolbarActivity"
+            android:label="Toolbar"
+            ></activity>
+        <activity
+            android:name=".activity.MaterialActivity"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".NetWorkActivity" />
+        <activity
+            android:name=".ThirdsActivity"
+            android:theme="@style/MDTheme_IMAGE" />
+        <activity android:name=".SecondActivity" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
