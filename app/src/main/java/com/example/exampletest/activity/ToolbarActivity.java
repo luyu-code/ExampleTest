@@ -14,23 +14,33 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.exampletest.R;
+import com.google.android.material.navigation.NavigationView;
 
 public class ToolbarActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private DrawerLayout drawer_layout;
-
+    private NavigationView navigation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_toolbar);
         toolbar = findViewById(R.id.toolbar);
         drawer_layout = findViewById(R.id.drawer_layout);
+        navigation = findViewById(R.id.navigation);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
         }
+        navigation.setCheckedItem(R.id.nav_phone);
+        navigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                drawer_layout.closeDrawers();
+                return true;
+            }
+        });
     }
 
     @Override

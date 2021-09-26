@@ -19,5 +19,51 @@
             android:layout_height="wrap_content"
             android:text="自定义Toolbar"
             />
+        <Button
+            android:id="@+id/my_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="实现进度条更新"
+            android:layout_marginLeft="10dp"
+            />
+        <Button
+            android:id="@+id/my_Coordinator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CoordinatorLayout布局"
+            android:layout_marginLeft="10dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/my_include"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="include布局"
+            android:layout_marginLeft="10dp"
+            />
+        <Button
+            android:id="@+id/btn_file_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="文件存储"
+            />
+        <Button
+            android:id="@+id/btn_recycle_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="recycleView的使用"
+            />
+        <Button
+            android:id="@+id/btn_broadcastReceiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送有序广播"
+            />
     </LinearLayout>
 </LinearLayout>

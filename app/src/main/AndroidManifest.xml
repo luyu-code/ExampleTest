@@ -11,12 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ExampleTest">
-        <activity android:name=".activity.ToolbarActivity"
-            android:label="Toolbar"
-            ></activity>
+        <activity android:name=".activity.BroadCastReceiverActivity"></activity>
+        <activity android:name=".activity.RecycleViewActivity" />
+        <activity android:name=".activity.FileStoreActivity" />
+        <activity android:name=".activity.IncludeActivity" />
+        <activity android:name=".activity.FruitActivity" />
+        <activity android:name=".activity.ProgressActivity" />
         <activity
-            android:name=".activity.MaterialActivity"
-            >
+            android:name=".activity.ToolbarActivity"
+            android:label="Toolbar" />
+        <activity android:name=".activity.MaterialActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +32,15 @@
             android:name=".ThirdsActivity"
             android:theme="@style/MDTheme_IMAGE" />
         <activity android:name=".SecondActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <receiver android:name=".receiver.BroadTestReceiver"
+            android:exported="true"
+            android:enabled="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.receiver"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
